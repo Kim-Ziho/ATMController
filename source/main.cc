@@ -23,9 +23,11 @@ namespace ATMController {
         };
         int step;
         std::string status;
+        Card* card_;
 
         public:
-        Controller(int step = 1);
+        Controller();
+        void
     };
 
     class Card {
@@ -64,13 +66,16 @@ namespace ATMController {
         int amount;
         std::chrono::system_clock::time_point day;
     };
-}
+
+Controller::Controller() 
+    : step(INSERT_CARD), status("waiting for card input") {};
 
 
 
-ATMController::Card::Card(std::string owner, int number)
+Card::Card(std::string owner, int number)
     : owner(owner), number(number), is_available(false), is_accessible(false) {}
 
-bool ATMController::Card::CheckingAvailable() {
+bool Card::CheckingAvailable() {
     is_available = true;
+}
 }
