@@ -23,11 +23,21 @@ namespace ATMController {
         };
         int step;
         std::string status;
-        Card* card_;
+        Card card;
 
         public:
         Controller();
         void
+    };
+
+    class MockBankAPI {
+        public:
+        bool ChecksPIN();
+    };
+
+    class MockHardware {
+        public:
+        std::string 
     };
 
     class Card {
