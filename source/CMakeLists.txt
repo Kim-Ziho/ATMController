@@ -1,1 +1,1 @@
-# add_executable(program main.cc)
+# add_executable(program app.cc)

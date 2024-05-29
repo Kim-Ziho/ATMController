@@ -24,10 +24,11 @@ namespace ATMController {
         int step;
         std::string status;
         Card card;
+        int inputted_PIN;
 
         public:
         Controller();
-        void
+        void GetPINNumber();
     };
 
     class MockBankAPI {
@@ -37,7 +38,6 @@ namespace ATMController {
 
     class MockHardware {
         public:
-        std::string 
     };
 
     class Card {
@@ -77,8 +77,8 @@ namespace ATMController {
         std::chrono::system_clock::time_point day;
     };
 
-Controller::Controller() 
-    : step(INSERT_CARD), status("waiting for card input") {};
+// Controller::Controller() 
+//     : step(INSERT_CARD), status("waiting for card input") {}
 
 
 
