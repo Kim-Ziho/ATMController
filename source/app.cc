@@ -28,7 +28,14 @@ namespace ATMController {
 
         public:
         Controller();
+        void GetCardInfo();
         void GetPINNumber();
+        void CheckPINNumber();
+        void SelectAccount();
+        void SeeBalance();
+        void SeeDeposit();
+        void SeeWithdraw();
+        void GoBack();
     };
 
     class MockBankAPI {
